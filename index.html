@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jesús Nicho — Data Scientist & Economist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="navbar__container">
+      <a class="navbar__logo" href="#hero">
+        <span class="navbar__logo-bracket">&lt;</span>JN<span class="navbar__logo-bracket">/&gt;</span>
+      </a>
+      <ul class="navbar__links">
+        <li><a href="#resumen">Resumen</a></li>
+        <li><a href="#experiencia">Experiencia</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#reconocimientos">Reconocimientos</a></li>
+      </ul>
+      <a href="mailto:a20176035@pucp.edu.pe" class="btn btn--nav">Contáctame</a>
+      <button class="navbar__toggle" id="navToggle" aria-label="Abrir menú">&#9776;</button>
+    </div>
+    <ul class="navbar__mobile" id="navMobile">
+      <li><a href="#resumen">Resumen</a></li>
+      <li><a href="#experiencia">Experiencia</a></li>
+      <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#habilidades">Habilidades</a></li>
+      <li><a href="#reconocimientos">Reconocimientos</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero" id="hero">
+    <canvas class="hero__canvas" id="particleCanvas"></canvas>
+    <div class="hero__content">
+      <div class="hero__left fade-in">
+        <div class="hero__status">
+          <span class="hero__status-dot"></span>
+          Disponible para nuevas oportunidades
+        </div>
+        <p class="hero__greeting">Hola, soy</p>
+        <h1 class="hero__name">Jesús Alberto<br /><span>Nicho Rosado</span></h1>
+        <div class="hero__typing-wrapper">
+          <span class="hero__typing-prefix">$ </span>
+          <span class="hero__typing" id="typingText"></span>
+          <span class="hero__cursor">|</span>
+        </div>
+        <p class="hero__desc">Bachiller de Economía · PUCP · Especializado en ciencia de datos aplicada a finanzas, riesgo crediticio e investigación económica.</p>
+        <div class="hero__actions">
+          <a href="#proyectos" class="btn btn--primary">Ver proyectos</a>
+          <a href="#experiencia" class="btn btn--outline">Mi experiencia</a>
+        </div>
+        <div class="hero__contact">
+          <a href="tel:+51917056909" class="hero__contact-item" title="Teléfono">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1.19h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          </a>
+          <a href="mailto:a20176035@pucp.edu.pe" class="hero__contact-item" title="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+          <a href="https://github.com/jnichor" target="_blank" rel="noopener" class="hero__contact-item" title="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.38 7.86 10.9.57.1.78-.25.78-.55v-1.93c-3.2.7-3.87-1.54-3.87-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.18 1.18a11.1 11.1 0 012.9-.39c.98 0 1.97.13 2.9.39 2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.77.11 3.06.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.41-5.27 5.7.41.36.78 1.06.78 2.13v3.16c0 .31.2.66.79.55A11.51 11.51 0 0023.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>
+          </a>
+          <a href="https://linkedin.com/in/jesus27nicho" target="_blank" rel="noopener" class="hero__contact-item" title="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.37V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.35-1.85 3.58 0 4.25 2.36 4.25 5.43v6.31zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zm1.78 13.02H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45C23.21 24 24 23.23 24 22.28V1.72C24 .77 23.21 0 22.22 0z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Terminal mockup -->
+      <div class="hero__right fade-in">
+        <div class="terminal">
+          <div class="terminal__bar">
+            <span class="terminal__dot terminal__dot--red"></span>
+            <span class="terminal__dot terminal__dot--yellow"></span>
+            <span class="terminal__dot terminal__dot--green"></span>
+            <span class="terminal__title">jesus_nicho.py</span>
+          </div>
+          <div class="terminal__body">
+            <div class="terminal__line"><span class="t-comment"># Perfil profesional</span></div>
+            <div class="terminal__line"><span class="t-keyword">class</span> <span class="t-class">JesusNicho</span>:</div>
+            <div class="terminal__line t-indent"><span class="t-keyword">def</span> <span class="t-fn">__init__</span>(self):</div>
+            <div class="terminal__line t-indent2">self.<span class="t-var">rol</span> = <span class="t-str">"Data Scientist"</span></div>
+            <div class="terminal__line t-indent2">self.<span class="t-var">universidad</span> = <span class="t-str">"PUCP"</span></div>
+            <div class="terminal__line t-indent2">self.<span class="t-var">skills</span> = [</div>
+            <div class="terminal__line t-indent3"><span class="t-str">"Python"</span>, <span class="t-str">"R"</span>, <span class="t-str">"Stata"</span>,</div>
+            <div class="terminal__line t-indent3"><span class="t-str">"Machine Learning"</span>, <span class="t-str">"Power BI"</span></div>
+            <div class="terminal__line t-indent2">]</div>
+            <div class="terminal__line t-indent2">self.<span class="t-var">disponible</span> = <span class="t-bool">True</span></div>
+            <div class="terminal__line">&nbsp;</div>
+            <div class="terminal__line t-indent"><span class="t-keyword">def</span> <span class="t-fn">contactar</span>(self):</div>
+            <div class="terminal__line t-indent2"><span class="t-keyword">return</span> <span class="t-str">"a20176035@pucp.edu.pe"</span></div>
+            <div class="terminal__line">&nbsp;</div>
+            <div class="terminal__line"><span class="t-comment"># Output:</span></div>
+            <div class="terminal__line"><span class="t-prompt">$</span> <span class="t-output">Listo para nuevos desafíos ✓</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats -->
+    <div class="hero__stats fade-in">
+      <div class="hero__stat">
+        <span class="hero__stat-num" data-target="5">0</span>
+        <span class="hero__stat-label">Años de experiencia</span>
+      </div>
+      <div class="hero__stat-divider"></div>
+      <div class="hero__stat">
+        <span class="hero__stat-num" data-target="4">0</span>
+        <span class="hero__stat-label">Proyectos destacados</span>
+      </div>
+      <div class="hero__stat-divider"></div>
+      <div class="hero__stat">
+        <span class="hero__stat-num" data-target="8">0</span>
+        <span class="hero__stat-label">Herramientas dominadas</span>
+      </div>
+      <div class="hero__stat-divider"></div>
+      <div class="hero__stat">
+        <span class="hero__stat-num" data-target="3">0</span>
+        <span class="hero__stat-label">Reconocimientos</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- RESUMEN -->
+    <section class="section" id="resumen">
+      <div class="section__container">
+        <div class="section__header fade-in">
+          <span class="section__tag">01 &mdash; Sobre mí</span>
+          <h2 class="section__title">Resumen</h2>
+        </div>
+        <div class="resumen__layout">
+          <div class="resumen__text fade-in">
+            <p>Soy bachiller de Economía por la <strong>Pontificia Universidad Católica del Perú (PUCP)</strong>, con sólida formación cuantitativa y experiencia en programación con <strong>Python, R y Stata</strong>, aplicado al análisis económico-financiero, modelado estadístico (logit, GLM, series de tiempo, clustering), visualización de datos y simulaciones.</p>
+            <p>Busco contribuir en proyectos de <strong>ciencia de datos aplicados a finanzas, riesgo crediticio e investigación</strong>, mediante soluciones basadas en datos, modelos predictivos y herramientas de analítica avanzada.</p>
+
+            <div class="resumen__educacion">
+              <h3>Educación</h3>
+              <div class="edu__item">
+                <div class="edu__icon">&#127979;</div>
+                <div class="edu__left">
+                  <strong>Pontificia Universidad Católica del Perú</strong>
+                  <span class="edu__degree">Bachiller en Economía · mar 2019 – dic 2024</span>
+                  <ul>
+                    <li>Python · Machine Learning · Econometría Avanzada · Prompt Engineering</li>
+                    <li>Análisis Financiero · ML para Finanzas · Evaluación Social de Proyectos</li>
+                  </ul>
+                </div>
+                <span class="edu__date-badge">Lima, Perú</span>
+              </div>
+              <div class="edu__item">
+                <div class="edu__icon">&#127760;</div>
+                <div class="edu__left">
+                  <strong>Idiomas Católica</strong>
+                  <span class="edu__degree">Inglés C1 – Avanzado · ago 2020 – Presente</span>
+                </div>
+                <span class="edu__date-badge">Lima, Perú</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Code snippet decorativo -->
+          <div class="resumen__code fade-in">
+            <div class="code-block">
+              <div class="code-block__header">
+                <span class="code-block__lang">R</span>
+                <span class="code-block__file">analisis.R</span>
+              </div>
+              <pre class="code-block__body"><span class="t-comment"># Modelado estadístico</span>
+<span class="t-keyword">library</span>(tidyverse)
+<span class="t-keyword">library</span>(caret)
+
+modelo <span class="t-op">&lt;-</span> <span class="t-fn">glm</span>(
+  desercion <span class="t-op">~</span> pobreza
+    <span class="t-op">+</span> acceso_internet
+    <span class="t-op">+</span> zona_rural,
+  data  <span class="t-op">=</span> peru_2021,
+  family <span class="t-op">=</span> <span class="t-fn">binomial</span>()
+)
+
+<span class="t-fn">summary</span>(modelo)
+<span class="t-comment"># AIC: 3847.2 ✓</span></pre>
+            </div>
+
+            <div class="code-block" style="margin-top:1.25rem;">
+              <div class="code-block__header">
+                <span class="code-block__lang">Python</span>
+                <span class="code-block__file">clasificacion.py</span>
+              </div>
+              <pre class="code-block__body"><span class="t-keyword">from</span> transformers <span class="t-keyword">import</span> pipeline
+
+clasificador <span class="t-op">=</span> <span class="t-fn">pipeline</span>(
+  <span class="t-str">"text-classification"</span>,
+  model<span class="t-op">=</span><span class="t-str">"bert-base"</span>
+)
+
+resultado <span class="t-op">=</span> <span class="t-fn">clasificador</span>(
+  requerimientos_df
+)
+<span class="t-comment"># Precisión: 94.3% ✓</span></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCIA LABORAL -->
+    <section class="section section--dark" id="experiencia">
+      <div class="section__container">
+        <div class="section__header fade-in">
+          <span class="section__tag section__tag--light">02 &mdash; Trayectoria</span>
+          <h2 class="section__title section__title--light">Experiencia Laboral</h2>
+        </div>
+        <div class="timeline">
+
+          <div class="timeline__item fade-in">
+            <div class="timeline__dot"></div>
+            <div class="timeline__card" data-expandable>
+              <div class="timeline__header">
+                <div class="timeline__header-main">
+                  <div class="timeline__company-wrap">
+                    <div class="timeline__company-icon">MS</div>
+                    <div>
+                      <h3 class="timeline__company">Management Solutions</h3>
+                      <p class="timeline__role">Consultor de Ciencia de Datos</p>
+                    </div>
+                  </div>
+                  <div class="timeline__meta">
+                    <span class="timeline__date-badge">Sep 2025 – Ene 2026</span>
+                    <span class="timeline__place">Lima, Perú</span>
+                  </div>
+                </div>
+                <div class="timeline__tech-tags">
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">Transformers</span>
+                  <span class="tech-tag">NLP</span>
+                  <span class="tech-tag">SQL</span>
+                </div>
+                <button class="timeline__toggle" aria-label="Ver detalles">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+              </div>
+              <ul class="timeline__details">
+                <li>Levanté el As-Is de procesos críticos de Finanzas cubriendo los diferentes building blocks para asegurar el entendimiento y análisis completo de la naturaleza operativa de cada proceso.</li>
+                <li>Identifiqué los principales stakeholders y entendí actividades, funciones, responsabilidades y sistemas utilizados.</li>
+                <li>Limpié diversas bases de datos y apliqué modelos preentrenados con la librería <strong>Transformers</strong> para clasificación de requerimientos de inversión.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline__item fade-in">
+            <div class="timeline__dot"></div>
+            <div class="timeline__card" data-expandable>
+              <div class="timeline__header">
+                <div class="timeline__header-main">
+                  <div class="timeline__company-wrap">
+                    <div class="timeline__company-icon">PUCP</div>
+                    <div>
+                      <h3 class="timeline__company">Pontificia Universidad Católica del Perú</h3>
+                      <p class="timeline__role">Practicante de Inversiones</p>
+                    </div>
+                  </div>
+                  <div class="timeline__meta">
+                    <span class="timeline__date-badge">Ene 2025 – Ago 2025</span>
+                    <span class="timeline__place">Lima, Perú</span>
+                  </div>
+                </div>
+                <div class="timeline__tech-tags">
+                  <span class="tech-tag">Excel</span>
+                  <span class="tech-tag">Power BI</span>
+                  <span class="tech-tag">SQL</span>
+                </div>
+                <button class="timeline__toggle" aria-label="Ver detalles">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+              </div>
+              <ul class="timeline__details">
+                <li>Apoyé en el modelamiento de bases de datos y elaboración de informes de gestión y desempeño para autoridades y áreas internas.</li>
+                <li>Actualicé instructivos, procedimientos y manuales vinculados al sistema de Gestión de Inversiones.</li>
+                <li>Brindé asistencia y capacitación a usuarios finales, facilitando la adopción de mejoras.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline__item fade-in">
+            <div class="timeline__dot"></div>
+            <div class="timeline__card" data-expandable>
+              <div class="timeline__header">
+                <div class="timeline__header-main">
+                  <div class="timeline__company-wrap">
+                    <div class="timeline__company-icon">PUCP</div>
+                    <div>
+                      <h3 class="timeline__company">Pontificia Universidad Católica del Perú</h3>
+                      <p class="timeline__role">Asistente de Investigación</p>
+                    </div>
+                  </div>
+                  <div class="timeline__meta">
+                    <span class="timeline__date-badge">Oct 2024 – Presente</span>
+                    <span class="timeline__place">Lima, Perú</span>
+                  </div>
+                </div>
+                <div class="timeline__tech-tags">
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">Stata</span>
+                  <span class="tech-tag">GitHub</span>
+                  <span class="tech-tag">LaTeX</span>
+                </div>
+                <button class="timeline__toggle" aria-label="Ver detalles">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+              </div>
+              <ul class="timeline__details">
+                <li>Colaboré con el Prof. Alexander Quispe en la organización y preparación de materiales para presentaciones académicas y seminarios.</li>
+                <li>Publiqué informes y resúmenes ejecutivos en repositorios de <strong>GitHub</strong>, contribuyendo a la divulgación de resultados de investigación.</li>
+                <li>Realicé análisis de datos aplicando métodos estadísticos en <strong>Python y Stata</strong>.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline__item fade-in">
+            <div class="timeline__dot"></div>
+            <div class="timeline__card" data-expandable>
+              <div class="timeline__header">
+                <div class="timeline__header-main">
+                  <div class="timeline__company-wrap">
+                    <div class="timeline__company-icon">RS</div>
+                    <div>
+                      <h3 class="timeline__company">RS Inversiones S.A.C.</h3>
+                      <p class="timeline__role">Practicante de Finanzas</p>
+                    </div>
+                  </div>
+                  <div class="timeline__meta">
+                    <span class="timeline__date-badge">Sep 2024 – Dic 2024</span>
+                    <span class="timeline__place">Lima, Perú</span>
+                  </div>
+                </div>
+                <div class="timeline__tech-tags">
+                  <span class="tech-tag">Power BI</span>
+                  <span class="tech-tag">Excel</span>
+                  <span class="tech-tag">SIRE</span>
+                  <span class="tech-tag">Python</span>
+                </div>
+                <button class="timeline__toggle" aria-label="Ver detalles">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+              </div>
+              <ul class="timeline__details">
+                <li>Elaboré informes financieros con el sistema SIRE, consolidando información clave para decisiones estratégicas.</li>
+                <li>Implementé un sistema de alertas automatizado para préstamos, <strong>reduciendo incumplimientos en un 15%</strong>.</li>
+                <li>Diseñé el presupuesto anual basado en análisis financiero, <strong>mejorando eficiencia en un 10%</strong>.</li>
+                <li>Creé <strong>dashboards interactivos en Power BI</strong> para métricas financieras críticas.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline__item fade-in">
+            <div class="timeline__dot"></div>
+            <div class="timeline__card" data-expandable>
+              <div class="timeline__header">
+                <div class="timeline__header-main">
+                  <div class="timeline__company-wrap">
+                    <div class="timeline__company-icon">RH</div>
+                    <div>
+                      <h3 class="timeline__company">Ronco Huacho</h3>
+                      <p class="timeline__role">Administrador de Costos y Presupuestos</p>
+                    </div>
+                  </div>
+                  <div class="timeline__meta">
+                    <span class="timeline__date-badge">Ene 2021 – Mar 2022</span>
+                    <span class="timeline__place">Huacho, Perú</span>
+                  </div>
+                </div>
+                <div class="timeline__tech-tags">
+                  <span class="tech-tag">Excel</span>
+                  <span class="tech-tag">Análisis financiero</span>
+                </div>
+                <button class="timeline__toggle" aria-label="Ver detalles">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+              </div>
+              <ul class="timeline__details">
+                <li>Analicé y reporté costos y presupuestos de la empresa, permitiendo mejor toma de decisiones estratégicas.</li>
+                <li>Gestioné redes sociales, logrando un <strong>incremento del 30% en ventas</strong>.</li>
+                <li>Propuse ideas de inversión estratégica, resultando en un <strong>aumento del 35% en ingresos anuales</strong>.</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PROYECTOS Y VOLUNTARIADOS -->
+    <section class="section" id="proyectos">
+      <div class="section__container">
+        <div class="section__header fade-in">
+          <span class="section__tag">03 &mdash; Trabajo</span>
+          <h2 class="section__title">Proyectos y Voluntariados</h2>
+        </div>
+        <div class="projects__grid">
+
+          <article class="project__card fade-in">
+            <div class="project__card-top">
+              <div class="project__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 12h6M9 15h4"/></svg>
+              </div>
+              <span class="project__badge project__badge--destacado">Destacado</span>
+            </div>
+            <span class="project__year">2024</span>
+            <h3>Impacto de ChatGPT en el Desarrollo de Software para Ciencia de Datos</h3>
+            <p>Análisis del efecto de ChatGPT en el ecosistema de software para ciencia de datos entre 2020 y 2023.</p>
+            <div class="project__stack">
+              <span>Python</span><span>Econometría</span><span>GitHub</span>
+            </div>
+          </article>
+
+          <article class="project__card fade-in">
+            <div class="project__card-top">
+              <div class="project__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              </div>
+              <span class="project__badge project__badge--relevante">Relevante</span>
+            </div>
+            <span class="project__year">2023</span>
+            <h3>Análisis Financiero de Backus (2012–2022)</h3>
+            <p>Estudio financiero longitudinal de la empresa Backus a lo largo de una década completa.</p>
+            <div class="project__stack">
+              <span>R</span><span>Stata</span><span>LaTeX</span>
+            </div>
+          </article>
+
+          <article class="project__card fade-in">
+            <div class="project__card-top">
+              <div class="project__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+              </div>
+              <span class="project__badge project__badge--destacado">Destacado</span>
+            </div>
+            <span class="project__year">2023</span>
+            <h3>Determinantes de la Deserción Escolar en Perú (2021)</h3>
+            <p>Investigación econométrica sobre factores de deserción escolar en el sistema educativo peruano.</p>
+            <div class="project__stack">
+              <span>Stata</span><span>Logit</span><span>Análisis causal</span>
+            </div>
+          </article>
+
+          <article class="project__card fade-in">
+            <div class="project__card-top">
+              <div class="project__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+              </div>
+              <span class="project__badge project__badge--sobresaliente">Sobresaliente</span>
+            </div>
+            <span class="project__year">2023</span>
+            <h3>Cobertura de Seguros de Salud en Perú (2017)</h3>
+            <p>Análisis situacional de los determinantes de cobertura de seguros de salud a nivel nacional.</p>
+            <div class="project__stack">
+              <span>R</span><span>GLM</span><span>Visualización</span>
+            </div>
+          </article>
+
+        </div>
+
+        <h3 class="section__subtitle fade-in">Voluntariado</h3>
+        <div class="volunteer__list">
+          <div class="volunteer__item fade-in">
+            <div class="volunteer__icon">&#9733;</div>
+            <div class="volunteer__body">
+              <span class="volunteer__year">2024</span>
+              <strong>Voluntario — Comisión de Asuntos Académicos</strong>
+              <p>Asamblea de Estudiantes de Economía · Pontificia Universidad Católica del Perú</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HABILIDADES -->
+    <section class="section section--alt" id="habilidades">
+      <div class="section__container">
+        <div class="section__header fade-in">
+          <span class="section__tag">04 &mdash; Capacidades</span>
+          <h2 class="section__title">Habilidades</h2>
+        </div>
+
+        <!-- Stack de tecnologías -->
+        <div class="tech-stack fade-in">
+          <div class="tech-card" data-level="Intermedio">
+            <div class="tech-card__icon tech-card__icon--python">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.914 0C5.82 0 6.2 2.656 6.2 2.656l.007 2.752h5.814v.826H3.9S0 5.789 0 11.969c0 6.18 3.403 5.963 3.403 5.963h2.031v-2.867s-.109-3.404 3.35-3.404h5.766s3.24.052 3.24-3.131V3.129S18.28 0 11.914 0zm-3.21 1.809a1.039 1.039 0 110 2.079 1.039 1.039 0 010-2.08z"/><path d="M12.086 24c6.096 0 5.716-2.656 5.716-2.656l-.007-2.752h-5.814v-.826h8.121S24 18.211 24 12.031c0-6.18-3.403-5.963-3.403-5.963h-2.031v2.867s.109 3.404-3.35 3.404H9.45s-3.24-.052-3.24 3.131v5.401S5.72 24 12.086 24zm3.21-1.809a1.039 1.039 0 110-2.079 1.039 1.039 0 010 2.08z"/></svg>
+            </div>
+            <span class="tech-card__name">Python</span>
+            <span class="tech-card__level">Intermedio</span>
+          </div>
+
+          <div class="tech-card" data-level="Intermedio">
+            <div class="tech-card__icon tech-card__icon--r">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm-.27 4.248h1.522c3.012 0 5.176 1.348 5.176 4.076 0 2.058-1.271 3.394-3.183 3.835l3.628 5.593h-2.476l-3.35-5.27H9.45v5.27H7.37V4.248zm1.73 1.632H9.45v4.994h4.01c1.732 0 2.89-.877 2.89-2.512 0-1.635-1.158-2.482-2.89-2.482z"/></svg>
+            </div>
+            <span class="tech-card__name">R</span>
+            <span class="tech-card__level">Intermedio</span>
+          </div>
+
+          <div class="tech-card" data-level="Intermedio">
+            <div class="tech-card__icon tech-card__icon--stata">
+              <div style="font-family:'Fira Code',monospace;font-weight:700;font-size:1.1rem;">St</div>
+            </div>
+            <span class="tech-card__name">Stata</span>
+            <span class="tech-card__level">Intermedio</span>
+          </div>
+
+          <div class="tech-card" data-level="Avanzado">
+            <div class="tech-card__icon tech-card__icon--git">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.546 10.93L13.067.452a1.55 1.55 0 00-2.188 0L8.708 2.627l2.76 2.76a1.838 1.838 0 012.327 2.341l2.658 2.66a1.838 1.838 0 012.048 2.927 1.84 1.84 0 01-2.6 0 1.846 1.846 0 01-.404-2.013l-2.48-2.481v6.522a1.84 1.84 0 01.48 3.319 1.84 1.84 0 01-2.6-1.64 1.842 1.842 0 011.108-1.68V8.436a1.838 1.838 0 01-1-2.406L8.26 3.29.454 11.1a1.55 1.55 0 000 2.187l10.48 10.478a1.55 1.55 0 002.186 0l10.426-10.426a1.55 1.55 0 000-2.41"/></svg>
+            </div>
+            <span class="tech-card__name">Git</span>
+            <span class="tech-card__level">Avanzado</span>
+          </div>
+
+          <div class="tech-card" data-level="Avanzado">
+            <div class="tech-card__icon tech-card__icon--excel">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.17 0H2.83A2.83 2.83 0 000 2.83v18.34A2.83 2.83 0 002.83 24h18.34A2.83 2.83 0 0024 21.17V2.83A2.83 2.83 0 0021.17 0zM13.5 17.5l-2.25-3.98L9 17.5H6.75l3.38-5.5-3.13-5h2.25l2 3.63 2-3.63H15.5l-3.13 5 3.38 5.5z"/></svg>
+            </div>
+            <span class="tech-card__name">Excel</span>
+            <span class="tech-card__level">Avanzado</span>
+          </div>
+
+          <div class="tech-card" data-level="Intermedio">
+            <div class="tech-card__icon tech-card__icon--powerbi">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M0 10.625h3.75v6.75H0zm5 -3.375h3.75v10.125H5zm5-3.375h3.75v13.5H10zm5 6.75h3.75v6.75H15z"/></svg>
+            </div>
+            <span class="tech-card__name">Power BI</span>
+            <span class="tech-card__level">Intermedio</span>
+          </div>
+
+          <div class="tech-card" data-level="Avanzado">
+            <div class="tech-card__icon tech-card__icon--latex">
+              <div style="font-family:serif;font-weight:700;font-size:1rem;letter-spacing:-1px;">LaTeX</div>
+            </div>
+            <span class="tech-card__name">LaTeX</span>
+            <span class="tech-card__level">Avanzado</span>
+          </div>
+
+          <div class="tech-card" data-level="Frameworks">
+            <div class="tech-card__icon tech-card__icon--tf">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M1.292 5.856L11.54 0v24l-4.095-2.378V7.603l-6.168 3.564.015-5.31zm21.43 5.311l-.014-5.31L12.46 0v24l4.094-2.378V15.24l3.092 1.786-.018-4.552-3.074-1.765V7.603l6.169 3.564z"/></svg>
+            </div>
+            <span class="tech-card__name">TensorFlow</span>
+            <span class="tech-card__level">Framework</span>
+          </div>
+        </div>
+
+        <!-- Barras de progreso -->
+        <div class="skills__grid">
+          <div class="skills__group fade-in">
+            <h3>Nivel de dominio</h3>
+            <div class="skills__bars">
+              <div class="skill__bar">
+                <div class="skill__info"><span>Git & GitHub</span><span class="skill__pct">Avanzado</span></div>
+                <div class="skill__track"><div class="skill__fill" data-width="85"></div></div>
+              </div>
+              <div class="skill__bar">
+                <div class="skill__info"><span>Excel</span><span class="skill__pct">Avanzado</span></div>
+                <div class="skill__track"><div class="skill__fill" data-width="85"></div></div>
+              </div>
+              <div class="skill__bar">
+                <div class="skill__info"><span>LaTeX</span><span class="skill__pct">Avanzado</span></div>
+                <div class="skill__track"><div class="skill__fill" data-width="85"></div></div>
+              </div>
+              <div class="skill__bar">
+                <div class="skill__info"><span>Python</span><span class="skill__pct">Intermedio</span></div>
+                <div class="skill__track"><div class="skill__fill" data-width="65"></div></div>
+              </div>
+              <div class="skill__bar">
+                <div class="skill__info"><span>R</span><span class="skill__pct">Intermedio</span></div>
+                <div class="skill__track"><div class="skill__fill" data-width="65"></div></div>
+              </div>
+              <div class="skill__bar">
+                <div class="skill__info"><span>Stata</span><span class="skill__pct">Intermedio</span></div>
+                <div class="skill__track"><div class="skill__fill" data-width="65"></div></div>
+              </div>
+              <div class="skill__bar">
+                <div class="skill__info"><span>Power BI</span><span class="skill__pct">Intermedio</span></div>
+                <div class="skill__track"><div class="skill__fill" data-width="60"></div></div>
+              </div>
+              <div class="skill__bar">
+                <div class="skill__info"><span>Matlab</span><span class="skill__pct">Básico</span></div>
+                <div class="skill__track"><div class="skill__fill" data-width="30"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skills__group fade-in">
+            <h3>Idiomas</h3>
+            <div class="skills__bars">
+              <div class="skill__bar">
+                <div class="skill__info"><span>Español</span><span class="skill__pct">Nativo</span></div>
+                <div class="skill__track"><div class="skill__fill" data-width="100"></div></div>
+              </div>
+              <div class="skill__bar">
+                <div class="skill__info"><span>Inglés</span><span class="skill__pct">C1 Avanzado</span></div>
+                <div class="skill__track"><div class="skill__fill" data-width="80"></div></div>
+              </div>
+            </div>
+
+            <h3 style="margin-top:2rem;">Habilidades Blandas</h3>
+            <div class="soft-skills">
+              <div class="soft-skill"><span class="soft-skill__icon">&#9650;</span>Liderazgo</div>
+              <div class="soft-skill"><span class="soft-skill__icon">&#9650;</span>Pensamiento crítico</div>
+              <div class="soft-skill"><span class="soft-skill__icon">&#9650;</span>Trabajo en equipo</div>
+              <div class="soft-skill"><span class="soft-skill__icon">&#9650;</span>Empatía</div>
+            </div>
+
+            <h3 style="margin-top:2rem;">Marcos de Trabajo</h3>
+            <div class="skills__tags">
+              <span class="tag">OPENAI-API</span>
+              <span class="tag">TensorFlow</span>
+              <span class="tag">SQL Server</span>
+              <span class="tag">HuggingFace</span>
+              <span class="tag">Scikit-learn</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RECONOCIMIENTOS -->
+    <section class="section" id="reconocimientos">
+      <div class="section__container">
+        <div class="section__header fade-in">
+          <span class="section__tag">05 &mdash; Logros</span>
+          <h2 class="section__title">Reconocimientos</h2>
+        </div>
+        <div class="awards__grid">
+
+          <div class="award__card fade-in">
+            <div class="award__glow"></div>
+            <div class="award__top">
+              <span class="award__year">2025</span>
+              <div class="award__trophy">&#127942;</div>
+            </div>
+            <h3>Ponente del X Congreso Anual APE 2025</h3>
+            <p>Asociación Peruana de Economía</p>
+          </div>
+
+          <div class="award__card fade-in">
+            <div class="award__glow"></div>
+            <div class="award__top">
+              <span class="award__year">2024</span>
+              <div class="award__trophy">&#127891;</div>
+            </div>
+            <h3>Beca Completa — Microeconomía Aplicada y CC.SS.</h3>
+            <p>QLAB · Pontificia Universidad Católica del Perú</p>
+          </div>
+
+          <div class="award__card fade-in">
+            <div class="award__glow"></div>
+            <div class="award__top">
+              <span class="award__year">2020</span>
+              <div class="award__trophy">&#127891;</div>
+            </div>
+            <h3>Beca Continuidad de Estudios</h3>
+            <p>Pronabec</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="footer__logo">&lt;JN/&gt;</div>
+      <p>Jesús Alberto Nicho Rosado &mdash; Lima, Perú</p>
+      <div class="footer__links">
+        <a href="mailto:a20176035@pucp.edu.pe">a20176035@pucp.edu.pe</a>
+        <a href="https://github.com/jnichor" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/jesus27nicho" target="_blank">LinkedIn</a>
+      </div>
+      <p class="footer__copy">Diseñado y desarrollado con HTML · CSS · JS</p>
+    </div>
+  </footer>
+
+  <!-- BOTÓN VOLVER ARRIBA -->
+  <button class="back-to-top" id="backToTop" aria-label="Volver arriba">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
