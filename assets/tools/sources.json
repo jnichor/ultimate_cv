@@ -1,0 +1,78 @@
+{
+  "verified_on": "2026-10-12",
+  "presentation": "Archivos originales locales; object-fit: contain, sin filtros, recoloreado ni recortes.",
+  "logos": [
+    {
+      "name": "Python",
+      "file": "python.svg",
+      "source_page": "https://www.python.org/community/logos/",
+      "asset_url": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg",
+      "credit": "Python Software Foundation",
+      "sha256": "baec8662a1461c2cacc326b54d2727cb2f1ce07ba02d00f5b826d035104f649f"
+    },
+    {
+      "name": "R",
+      "file": "r.svg",
+      "source_page": "https://www.r-project.org/logo/",
+      "asset_url": "https://www.r-project.org/logo/Rlogo.svg",
+      "credit": "© 2016 The R Foundation; CC BY-SA 4.0, sin modificaciones",
+      "sha256": "6d3318a61b6370799dc413c8bded66ee3417509c0f4a82c7739e5e1c057c4269"
+    },
+    {
+      "name": "Stata",
+      "file": "stata.svg",
+      "source_page": "https://www.stata.com/",
+      "asset_url": "https://www.stata.com/includes/images/stata-logo-blue.svg",
+      "credit": "StataCorp",
+      "sha256": "58dd80afe2ece40e24f13e3408cafed304c003df1ed88d138405ee4bc66f9c63"
+    },
+    {
+      "name": "Git",
+      "file": "git.svg",
+      "source_page": "https://git-scm.com/community/logos",
+      "asset_url": "https://git-scm.com/images/logos/downloads/Git-Icon-1788C.svg",
+      "credit": "Git Logo by Jason Long; CC BY 3.0, sin modificaciones",
+      "sha256": "1080a5430edb6278dc03e4b04efc16c8bed5b943408d648ad721a28836814220"
+    },
+    {
+      "name": "Excel",
+      "file": "excel.svg",
+      "source_page": "https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/excel-create-worksheet-from-web-site",
+      "asset_url": "https://res-1.cdn.office.net/files/fabric-cdn-prod_20230815.002/assets/brand-icons/product/svg/excel_48x1.svg",
+      "credit": "Microsoft",
+      "sha256": "da91a550409ab355e664188a00135bc93603e5a8f53df3eeed8abc2ab3db8d71"
+    },
+    {
+      "name": "Power BI",
+      "file": "powerbi.svg",
+      "source_page": "https://learn.microsoft.com/en-us/fabric/fundamentals/icons",
+      "asset_url": "https://raw.githubusercontent.com/microsoft/fabric-samples/main/docs-samples/Icons.zip",
+      "credit": "Microsoft; SVG power_bi_48_color.svg de v6.1.0/package/dist/svg/",
+      "sha256": "264abad01f50acaffb697b3ede22215b7d87f387c1af92f0a0b14117d2c2e4f1"
+    },
+    {
+      "name": "LaTeX",
+      "file": "latex.svg",
+      "source_page": "https://www.latex-project.org/",
+      "asset_url": "https://www.latex-project.org/ (SVG original del footer)",
+      "credit": "LaTeX Project; diseño web de Jonas Jacek, CC BY 4.0",
+      "sha256": "3986c80d6d1d405e403a9b8fbfcd8704e642c286cb10175480c599295fc40c07"
+    },
+    {
+      "name": "TensorFlow",
+      "file": "tensorflow.png",
+      "source_page": "https://www.tensorflow.org/",
+      "asset_url": "https://www.gstatic.com/devrel-devsite/prod/v097103d8ccd7b257790809ea4cc5e5fee6daa6e24890a4af388296e58364bc31/tensorflow/images/apple-touch-icon-180x180.png",
+      "credit": "TensorFlow, the TensorFlow logo and any related marks are trademarks of Google Inc.",
+      "sha256": "adbaa44d875c209b63be5781b03df3dee155206b1ad47d21d7aec76f7f5eb1ca"
+    },
+    {
+      "name": "MATLAB",
+      "file": "matlab.svg",
+      "source_page": "https://github.com/mathworks/matlab-proxy",
+      "asset_url": "https://raw.githubusercontent.com/mathworks/matlab-proxy/main/matlab_proxy/icons/matlab.svg",
+      "credit": "MATLAB is a registered trademark of The MathWorks, Inc.",
+      "sha256": "c61e6e61e6d077c23e212bde9e353d03e3e40a5cd6fe553dc2f9b77685ce14a3"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "verified_on": "2026-10-12",
+  "logos": [
+    {
+      "entity": "Pontificia Universidad Católica del Perú",
+      "file": "pucp.svg",
+      "source_page": "https://www.pucp.edu.pe/",
+      "asset_url": "https://s3.amazonaws.com/files.pucp.edu.pe/pucp-general/img-header/logo-pucp-new.svg",
+      "presentation": "Archivo oficial completo, sin modificaciones. Fondo oscuro #0d1117 para conservar visible el wordmark blanco; object-fit: contain."
+    },
+    {
+      "entity": "Universidad del Pacífico (Lima, Perú)",
+      "file": "universidad-pacifico.png",
+      "source_page": "https://campusvirtual.up.edu.pe/administrativos/webmarketing.aspx",
+      "asset_url": "https://sisisemail.up.edu.pe/sisisemail/_data/2021/2052/UniversidadDelPacifico/UniversidadDelPacifico.png",
+      "presentation": "Archivo oficial completo, sin modificaciones."
+    },
+    {
+      "entity": "Management Solutions",
+      "file": "management-solutions-footer.svg",
+      "source_page": "https://www.managementsolutions.com/en",
+      "asset_url": "https://www.managementsolutions.com/themes/custom/ms/footer_logo.svg",
+      "presentation": "Original de footer oficial en azul y dorado; archivo sin modificaciones."
+    },
+    {
+      "entity": "Ronco Huacho",
+      "file": "ronco-huacho.png",
+      "source": "Imagen proporcionada y asignada a Ronco Huacho por Jesus el 2026-10-12.",
+      "presentation": "Copia exacta de la imagen enviada, completa y sin modificaciones; object-fit: contain."
+    }
+  ]
+}
