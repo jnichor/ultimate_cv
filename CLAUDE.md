@@ -27,6 +27,8 @@ Por pedido de Jesus, el footer incluye también un botón con el logo original b
 
 HTML, CSS y JavaScript nativos; sin frameworks ni compilación. Las fuentes de Google Fonts son opcionales y tienen fallback local. Abre `index.html` o sirve la carpeta con `python -m http.server 8000`. Comprueba sintaxis con `node --check script.js`. Nunca ejecutes un build ni instales dependencias por esta tarea.
 
+El enlace a `style.css` en `index.html` usa `?v=` con los primeros 12 caracteres del SHA-256 del archivo. Después de cada cambio CSS, actualiza ese valor para invalidar la caché del navegador y mostrar la versión publicada correcta.
+
 ## Contenido vigente
 
 - Licenciado en Economía por la PUCP con mención sobresaliente. Estudios marzo 2019–diciembre 2024; título profesional septiembre de 2026.
