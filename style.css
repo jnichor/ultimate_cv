@@ -2339,7 +2339,7 @@ button, summary {
 }
 
 /* =========================================
-   Circuitos y órbitas visibles, sin modificar el contenido
+   Luz orgánica en experiencia y contacto, sin geometría
    ========================================= */
 #experiencia, #contacto {
   position: relative;
@@ -2351,149 +2351,63 @@ button, summary {
   position: relative;
   z-index: 1;
 }
-#experiencia::before, #contacto::before, #contacto::after {
+#experiencia::before, #experiencia::after, #contacto::before, #contacto::after {
   content: '';
   position: absolute;
   z-index: 0;
   pointer-events: none;
 }
+/* Aurora amplia: luz suave desde el primer tramo, también en móvil. */
 #experiencia::before {
-  inset: 0;
-  background-image: linear-gradient(rgba(0,168,232,.07) 1px, transparent 1px), linear-gradient(90deg, rgba(0,168,232,.07) 1px, transparent 1px);
-  background-size: 56px 56px;
-  mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
-}
-.experience__circuit-layer, .contact__orbit-layer {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-}
-.experience__heading {
-  position: relative;
-}
-.experience__circuit-top {
-  position: absolute;
-  bottom: -26px;
-  left: 0;
-  display: block;
-  width: 100%;
-  height: 18px;
-  pointer-events: none;
-}
-.experience__circuit-layer path, .experience__circuit-top path, .contact__orbit-layer ellipse {
-  fill: none;
-  vector-effect: non-scaling-stroke;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-.experience__circuit-line {
-  stroke: rgba(0,168,232,.4);
-  stroke-width: 1.5px;
-}
-.experience__circuit-pulse {
-  stroke: #00A8E8;
-  stroke-width: 2.5px;
-  stroke-dasharray: 34 146;
-  filter: drop-shadow(0 0 4px rgba(0,168,232,.6));
-  animation: experience-circuit-pulse 8s linear infinite paused;
-}
-.experience__circuit-dots {
-  stroke: #8de4ff;
-  stroke-width: 6px;
-  stroke-dasharray: 1 181;
-  filter: drop-shadow(0 0 5px rgba(0,168,232,.85));
-  animation: experience-circuit-dots 8s linear infinite paused;
-}
-.experience__circuit-right {
-  animation-delay: -4s;
-}
-.experience__circuit-top-dot {
-  stroke: #8de4ff;
-  stroke-width: 7px;
-  stroke-dasharray: .5 99.5;
-  filter: drop-shadow(0 0 5px rgba(0,168,232,.9));
-  animation: experience-top-point 6s linear infinite paused;
-}
-@keyframes experience-circuit-pulse {
-  to { stroke-dashoffset: -360; }
-}
-@keyframes experience-circuit-dots {
-  to { stroke-dashoffset: -364; }
-}
-@keyframes experience-top-point {
-  to { stroke-dashoffset: -100; }
-}
-/* Órbitas que rodean el recuadro, con nodos fuera de las zonas de lectura. */
-#contacto::before {
-  inset: -35% -10%;
-  background: radial-gradient(ellipse at 25% 60%, rgba(0,168,232,.34), transparent 58%);
+  inset: -4% -12%;
+  background: radial-gradient(ellipse 80% 25% at 18% 15%, rgba(0,168,232,.24), transparent 70%), radial-gradient(ellipse 72% 24% at 82% 46%, rgba(31,58,95,.65), transparent 72%);
   opacity: .85;
-  animation: contact-halo-drift 9s ease-in-out infinite alternate paused;
+  animation: experience-aurora-drift 10s ease-in-out infinite paused;
+}
+#experiencia::after {
+  inset: -3% -8%;
+  background: radial-gradient(ellipse 68% 24% at 86% 24%, rgba(74,144,226,.2), transparent 70%), radial-gradient(ellipse 70% 22% at 15% 82%, rgba(0,168,232,.16), transparent 72%);
+  opacity: .7;
+  animation: experience-aurora-flow 12s ease-in-out infinite paused;
+}
+@keyframes experience-aurora-drift {
+  0%, 100% { transform: translate(-4%, 1%) scale(1.02); opacity: .7; }
+  50% { transform: translate(5%, -2%) scale(1.08); opacity: .95; }
+}
+@keyframes experience-aurora-flow {
+  0%, 100% { transform: translate(3%, -1%) scale(1.03); }
+  50% { transform: translate(-4%, 2%) scale(1.08); }
+}
+/* Contacto: dos focos difusos que se acercan y respiran alrededor del recuadro. */
+#contacto::before {
+  inset: -25% -10%;
+  background: radial-gradient(ellipse 54% 68% at 18% 60%, rgba(0,168,232,.32), transparent 72%);
+  opacity: .8;
+  animation: contact-light-left 8s ease-in-out infinite paused;
 }
 #contacto::after {
-  inset: -25% -8%;
-  background: radial-gradient(ellipse at 80% 35%, rgba(74,144,226,.24), transparent 52%);
+  inset: -25% -10%;
+  background: radial-gradient(ellipse 54% 68% at 82% 40%, rgba(74,144,226,.28), transparent 72%);
   opacity: .75;
-  animation: contact-halo-breathe 10s ease-in-out infinite alternate paused;
+  animation: contact-light-right 6s ease-in-out infinite paused;
 }
-.contact__orbit-line {
-  stroke: rgba(0,168,232,.45);
-  stroke-width: 1.3px;
+@keyframes contact-light-left {
+  0%, 100% { transform: translate(-3%, 1%) scale(.98); opacity: .55; }
+  50% { transform: translate(9%, -1%) scale(1.08); opacity: .95; }
 }
-.contact__orbit-line--inner {
-  stroke: rgba(74,144,226,.3);
+@keyframes contact-light-right {
+  0%, 100% { transform: translate(3%, -1%) scale(1.02); opacity: .85; }
+  50% { transform: translate(-9%, 1%) scale(1.08); opacity: .55; }
 }
-.contact__orbit-dots {
-  stroke: #8de4ff;
-  stroke-width: 9px;
-  stroke-dasharray: .5 179.5;
-  filter: drop-shadow(0 0 7px rgba(0,168,232,.8));
-  animation: contact-orbit-points 10s linear infinite paused;
-}
-.contact__orbit-dots--inner {
-  stroke: #5eb9ff;
-  stroke-width: 6px;
-  stroke-dasharray: .5 119.5;
-  animation-duration: 8s;
-  animation-direction: reverse;
-  animation-delay: -2s;
-}
-@keyframes contact-orbit-points {
-  to { stroke-dashoffset: -360; }
-}
-@keyframes contact-halo-drift {
-  from { transform: translate(-5%, 3%) scale(.94); }
-  to { transform: translate(5%, -3%) scale(1.07); }
-}
-@keyframes contact-halo-breathe {
-  from { transform: scale(.94); opacity: .55; }
-  to { transform: scale(1.08); opacity: .85; }
-}
-/* El mismo estado controla cada recorrido, sin bucles JavaScript adicionales. */
-.motion-enabled #experiencia.background-motion-active .experience__circuit-pulse,
-.motion-enabled #experiencia.background-motion-active .experience__circuit-dots,
-.motion-enabled #experiencia.background-motion-active .experience__circuit-top-dot,
-.motion-enabled #contacto.background-motion-active .contact__orbit-dots,
+.motion-enabled #experiencia.background-motion-active::before,
+.motion-enabled #experiencia.background-motion-active::after,
 .motion-enabled #contacto.background-motion-active::before,
 .motion-enabled #contacto.background-motion-active::after {
   animation-play-state: running;
-}
-.motion-enabled #contacto.background-motion-active::before,
-.motion-enabled #contacto.background-motion-active::after {
   will-change: transform, opacity;
 }
-@media (max-width: 768px) {
-  .experience__circuit-line { stroke-width: 1.3px; }
-  .experience__circuit-dots { stroke-width: 5px; }
-  .contact__orbit-dots { stroke-width: 8px; }
-  .contact__orbit-dots--inner { stroke-width: 5px; }
-}
 @media (prefers-reduced-motion: reduce) {
-  .experience__circuit-pulse, .experience__circuit-dots, .experience__circuit-top-dot, .contact__orbit-dots, #contacto::before, #contacto::after {
+  #experiencia::before, #experiencia::after, #contacto::before, #contacto::after {
     animation: none;
     transform: none;
   }
@@ -2504,7 +2418,7 @@ button, summary {
     background: white;
     color: #222;
   }
-  .navbar, .navbar__progress, .hero::before, .hero__canvas, .hero__right, .hero__actions, .back-to-top, .resumen__code, .experience__all, .footer__actions, .footer__copy-email, .footer__status, #experiencia::before, #experiencia::after, #contacto::before, #contacto::after, .experience__circuit-layer, .experience__circuit-top, .contact__orbit-layer {
+  .navbar, .navbar__progress, .hero::before, .hero__canvas, .hero__right, .hero__actions, .back-to-top, .resumen__code, .experience__all, .footer__actions, .footer__copy-email, .footer__status, #experiencia::before, #experiencia::after, #contacto::before, #contacto::after {
     display: none;
   }
   .hero {
