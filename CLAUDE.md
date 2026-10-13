@@ -36,7 +36,7 @@ El enlace a `style.css` en `index.html` usa `?v=` con los primeros 12 caracteres
 - Docencia en Universidad del Pacífico, abril–mayo de 2026; ubicación visible «Lima, Perú», corregida por indicación de Jesus. Conservar el PDF original intacto.
 - Inglés B2 intermedio, Idiomas Católica, agosto de 2020–presente.
 - Teléfono `+51 972 571 826`, correo `a20176035@pucp.edu.pe`; San Miguel, Lima, Perú.
-- No inventes disponibilidad, años de experiencia, métricas de modelos ni niveles. Los logros 15 %, 10 %, 30 % y 35 % proceden del PDF. Los contadores representan seis experiencias, nueve proyectos y tres reconocimientos. Las barras expresan categorías cualitativas, no porcentajes de competencia.
+- Por indicación explícita de Jesus, la etiqueta verde del hero dice «Disponible para nuevas oportunidades». No añadas fecha de incorporación, jornada ni otras condiciones de disponibilidad. No inventes años de experiencia, métricas de modelos ni niveles. Los logros 15 %, 10 %, 30 % y 35 % proceden del PDF. Los contadores representan seis experiencias, nueve proyectos y tres reconocimientos. Las barras expresan categorías cualitativas, no porcentajes de competencia.
 - La terminal presenta datos verdaderos del perfil; los bloques de código son ejemplos ilustrativos, sin AIC ni precisión ficticia. Los roles animados se limitan a Economista, Ciencia de Datos, Machine Learning e IA e Investigación Económica.
 
 ## Enlaces
