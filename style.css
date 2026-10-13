@@ -2338,12 +2338,105 @@ button, summary {
   }
 }
 
+/* =========================================
+   Fondos de experiencia y contacto, distintos del hero
+   ========================================= */
+#experiencia, #contacto {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  overflow: clip;
+}
+#experiencia > .section__container, #contacto > .footer__container {
+  position: relative;
+  z-index: 1;
+}
+#experiencia::before, #experiencia::after, #contacto::before, #contacto::after {
+  content: '';
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+  animation-play-state: paused;
+}
+/* Retícula estática y líneas de datos que se desplazan detrás del timeline. */
+#experiencia::before {
+  inset: 0;
+  background-image: linear-gradient(rgba(0,168,232,.045) 1px, transparent 1px), linear-gradient(90deg, rgba(0,168,232,.045) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent);
+}
+#experiencia::after {
+  inset: 0;
+  background-image: linear-gradient(90deg, transparent, rgba(0,168,232,.45), transparent), linear-gradient(90deg, transparent, rgba(74,144,226,.4), transparent), linear-gradient(90deg, transparent, rgba(0,168,232,.35), transparent);
+  background-size: 180px 2px, 140px 1px, 200px 1px;
+  background-position: 18% 19%, 68% 53%, 36% 84%;
+  background-repeat: no-repeat;
+  opacity: .4;
+  animation: experience-data-flow 22s linear infinite alternate paused;
+}
+@keyframes experience-data-flow {
+  0% {
+    transform: translateX(-22%);
+    opacity: .3;
+  }
+  50% {
+    opacity: .65;
+  }
+  100% {
+    transform: translateX(22%);
+    opacity: .3;
+  }
+}
+/* El contacto usa halos y ondas elípticas, sin repetir la retícula. */
+#contacto::before {
+  inset: -40% -12%;
+  background: radial-gradient(ellipse at 28% 65%, rgba(0,168,232,.18), transparent 55%);
+  opacity: .6;
+  animation: contact-halo-drift 18s ease-in-out infinite alternate paused;
+}
+#contacto::after {
+  inset: -45% -15%;
+  background: radial-gradient(ellipse at 70% 45%, transparent 34%, rgba(0,168,232,.14) 34.2%, transparent 34.7%, transparent 47%, rgba(74,144,226,.11) 47.2%, transparent 47.7%, transparent 60%, rgba(0,168,232,.08) 60.2%, transparent 60.7%);
+  opacity: .6;
+  animation: contact-wave-breathe 24s ease-in-out infinite alternate paused;
+}
+@keyframes contact-halo-drift {
+  from {
+    transform: translate(-3%, 2%) scale(.95);
+  }
+  to {
+    transform: translate(3%, -2%) scale(1.04);
+  }
+}
+@keyframes contact-wave-breathe {
+  from {
+    transform: translate(2%, 1%) scale(.94);
+    opacity: .45;
+  }
+  to {
+    transform: translate(-2%, -1%) scale(1.06);
+    opacity: .7;
+  }
+}
+.motion-enabled #experiencia.background-motion-active::after,
+.motion-enabled #contacto.background-motion-active::before,
+.motion-enabled #contacto.background-motion-active::after {
+  animation-play-state: running;
+  will-change: transform, opacity;
+}
+@media (prefers-reduced-motion: reduce) {
+  #experiencia::after, #contacto::before, #contacto::after {
+    animation: none;
+    transform: none;
+  }
+}
+
 @media print {
   body, .section, .section--dark, .section--alt, .hero, .footer {
     background: white;
     color: #222;
   }
-  .navbar, .navbar__progress, .hero::before, .hero__canvas, .hero__right, .hero__actions, .back-to-top, .resumen__code, .experience__all, .footer__actions, .footer__copy-email, .footer__status {
+  .navbar, .navbar__progress, .hero::before, .hero__canvas, .hero__right, .hero__actions, .back-to-top, .resumen__code, .experience__all, .footer__actions, .footer__copy-email, .footer__status, #experiencia::before, #experiencia::after, #contacto::before, #contacto::after {
     display: none;
   }
   .hero {

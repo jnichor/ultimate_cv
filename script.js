@@ -17,6 +17,34 @@
   let counterObserver;
   const counterFrames = new Set();
 
+  // Fondos CSS independientes del hero: activos solo dentro del área visible.
+  const backgroundSections = [document.getElementById('experiencia'), document.getElementById('contacto')].filter(Boolean);
+  const visibleBackgroundSections = new Set();
+  let backgroundsPrinting = false;
+  const syncBackgroundMotion = () => {
+    const allowed = !reducedMotion.matches && !document.hidden && !backgroundsPrinting;
+    backgroundSections.forEach(section => {
+      let visible = visibleBackgroundSections.has(section);
+      if (!('IntersectionObserver' in window)) {
+        const bounds = section.getBoundingClientRect();
+        visible = bounds.bottom > 0 && bounds.top < window.innerHeight;
+      }
+      section.classList.toggle('background-motion-active', allowed && visible);
+    });
+  };
+  if ('IntersectionObserver' in window) {
+    const backgroundObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) visibleBackgroundSections.add(entry.target);
+        else visibleBackgroundSections.delete(entry.target);
+      });
+      syncBackgroundMotion();
+    });
+    backgroundSections.forEach(section => backgroundObserver.observe(section));
+  }
+  document.addEventListener('visibilitychange', syncBackgroundMotion);
+  reducedMotion.addEventListener('change', syncBackgroundMotion);
+
   // Menú accesible: estado, Escape y restablecimiento al cambiar de tamaño.
   const setMenu = (open, returnFocus = false) => {
     menu.classList.toggle('open', open);
@@ -41,6 +69,7 @@
   const links = [...document.querySelectorAll('.navbar__links a, .navbar__mobile a')];
   const sections = [...document.querySelectorAll('section[id], header[id], footer[id]')];
   const updateNavigation = () => {
+    if (!('IntersectionObserver' in window)) syncBackgroundMotion();
     navbar.classList.toggle('scrolled', window.scrollY > 20);
     const scrollable = document.documentElement.scrollHeight - window.innerHeight;
     const progress = scrollable > 0 ? Math.min(1, Math.max(0, window.scrollY / scrollable)) : 0;
@@ -273,6 +302,8 @@
   let printState = [];
   window.addEventListener('beforeprint', () => {
     if (printState.length) return;
+    backgroundsPrinting = true;
+    syncBackgroundMotion();
     printState = experienceCards.map(item => ({ item, open: item.open }));
     printState.forEach(({ item }) => { item.open = true; });
     syncExperienceControl();
@@ -281,6 +312,8 @@
   window.addEventListener('afterprint', () => {
     printState.forEach(({ item, open }) => { item.open = open; });
     printState = [];
+    backgroundsPrinting = false;
+    syncBackgroundMotion();
     syncExperienceControl();
     scheduleNavigation();
   });

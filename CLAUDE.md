@@ -78,6 +78,9 @@ Ronco Huacho usa `ronco-huacho.png`, imagen cuadrada original enviada por Jesus.
 
 HTML semántico, BEM, comentarios en español y código legible. Sin JavaScript, contenido y `details/summary` siguen disponibles. Mantén foco visible, controles de 44 px, buen contraste y texto móvil legible. Verifica 375/768/1024/1440 px sin overflow. El menú actualiza `aria-expanded`, cierra con Escape y restablece su estado al cruzar el breakpoint. Partículas y typing se pausan fuera de pantalla o con pestaña oculta; movimiento reducido muestra valores finales sin timers ni partículas. Nueve proyectos en tarjetas originales, dos columnas en desktop y una columna móvil, con enlaces siempre visibles. No agregues decoraciones o secciones nuevas como sustituto del diseño existente.
 
+
+La experiencia tiene retícula y líneas de datos de fondo; contacto usa halos y ondas suaves. Son pseudoelementos CSS detrás del contenido, sin capturar clics ni generar desbordamiento. `.background-motion-active` habilita el movimiento solo cuando la sección está visible y la pestaña activa; sin JavaScript o con movimiento reducido permanecen estáticos. Se pausan al imprimir y los fondos decorativos se ocultan en la impresión. El hero conserva sus animaciones actuales.
+
 ## Escritura del nombre
 
 Por indicación del usuario, escribir **Jesus** sin tilde en el sitio, título y metadatos. Conservar el PDF original sin cambios.
