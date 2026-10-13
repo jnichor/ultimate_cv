@@ -31,7 +31,7 @@ HTML, CSS y JavaScript nativos; sin frameworks ni compilación. Las fuentes de G
 
 - Licenciado en Economía por la PUCP con mención sobresaliente. Estudios marzo 2019–diciembre 2024; título profesional septiembre de 2026.
 - Investigación en PUCP, octubre de 2024–presente, primero y expandido inicialmente. Incluye revisión de artículos con LLMs/multiagentes, NLP, automatización y plataforma laboral.
-- Docencia en Universidad del Pacífico, abril–mayo de 2026, modalidad virtual.
+- Docencia en Universidad del Pacífico, abril–mayo de 2026; ubicación visible «Lima, Perú», corregida por indicación de Jesus. Conservar el PDF original intacto.
 - Inglés B2 intermedio, Idiomas Católica, agosto de 2020–presente.
 - Teléfono `+51 972 571 826`, correo `a20176035@pucp.edu.pe`; San Miguel, Lima, Perú.
 - No inventes disponibilidad, años de experiencia, métricas de modelos ni niveles. Los logros 15 %, 10 %, 30 % y 35 % proceden del PDF. Los contadores representan seis experiencias, nueve proyectos y tres reconocimientos. Las barras expresan categorías cualitativas, no porcentajes de competencia.
